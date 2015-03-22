@@ -43,3 +43,7 @@ DT_act <- data.table(df[,-80])
 mean_subject <- DT_sub[, lapply(.SD, mean), by = subject]
 mean_activity <- DT_act[,lapply(.SD, mean), by = activity]
 
+#Output:
+write.table(mean, file="tidy data.txt", row.names=FALSE)
+
+
